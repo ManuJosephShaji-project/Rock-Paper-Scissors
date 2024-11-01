@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <h1 class="heading">Rock Paper Scissors</h1>
+      </header>
+
+      <div class="container">
+        <!----- Player Section  ------>
+
+        <div class="player-container">
+          <h1 class="card-heading">You</h1>
+
+          <div class="select-box">
+            <h3>Pick One</h3>
+            <button class="btn">
+              <img
+                class="img-item rock"
+                src="./images/hand-rock.png"
+                alt="image of fist hand sign"
+              />
+            </button>
+            <button class="btn">
+              <img
+                class="img-item paper"
+                src="./images/hand-paper.png"
+                alt="image of hand"
+              />
+            </button>
+            <button class="btn">
+              <img
+                class="img-item scissors"
+                src="./images/hand-scissors.png"
+                alt="image of Scissors hand sign"
+              />
+            </button>
+          </div>
+          <div class="selected-box">
+            <img class="img-picked" src="" />
+          </div>
+        </div>
+
+        <!----- Scors Section  ------>
+
+        <div class="scors-container">
+          <h1 class="card-heading">It's Play time</h1>
+
+          <div class="both-tie">
+            <img
+              class="img-balance-scale"
+              src="./images/balance-scale.png"
+              alt="image of balance scale"
+            />
+          </div>
+
+          <div class="display-scors">
+            <h1>Scors</h1>
+            <div class="points">
+              <p class="playerScore">0</p>
+              <div class="mid-line"></div>
+              <p class="machineScore">0</p>
+            </div>
+          </div>
+        </div>
+
+        <!----- Auto playing ------>
+
+        <div class="auto-play-container">
+          <h1 class="card-heading">Machine</h1>
+
+          <div class="select-box">
+            <button class="btn">
+              <img
+                class="img-item2 rock"
+                src="./images/hand-rock.png"
+                alt="image of fist hand sign"
+              />
+            </button>
+            <button class="btn">
+              <img
+                class="img-item2 paper"
+                src="./images/hand-paper.png"
+                alt="image of hand"
+              />
+            </button>
+            <button class="btn">
+              <img
+                class="img-item2 scissors"
+                src="./images/hand-scissors.png"
+                alt="image of Scissors hand sign"
+              />
+            </button>
+          </div>
+          <div class="selected-box">
+            <img class="machine-picked" src="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="container-winner">
+        <div class="card">
+          <div class="card2">
+            <img class="winner" src="">
+             <h1 class="fail"></h1>
+            <img class="icon-close" src="./images/close.png" alt="icon close">
+            <!----Button play-again---->
+
+        <button class="btn-play">
+          <img class="icon-scissors" src="./images/icon-scissors.png" alt="icon of scissor">
+         <span class="again">again</span>
+         <span class="play">play</span>
+       </button>
+
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

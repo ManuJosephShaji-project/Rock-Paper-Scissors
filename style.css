@@ -1,0 +1,403 @@
+@font-face {
+    font-family: goblin-font;
+    src: url("glitch-goblin-font/GlitchGoblin-2O87v.ttf");
+}
+
+@font-face {
+    font-family: glich2-font;
+    src: url("sd-glitch-2-font/SdglitchdemoRegular-YzROj.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    flex-direction: column;
+    padding: 4%;
+}
+
+h1,
+h2,
+h3 {
+    font-family: glich2-font;
+    text-transform: uppercase;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr;
+    gap: 2%;
+
+}
+
+.player-container,
+.auto-play-container {
+    width: 100%;
+    height: 470px;
+    font-size: 1.5em;
+    border-radius: 15px;
+}
+
+.auto-play-container {
+    background-color: #0C1844;
+}
+
+/* Heading Styling */
+.heading {
+    text-align: center;
+    font-family: goblin-font;
+    text-transform: uppercase;
+    font-size: 2.8em;
+    margin-bottom: 60px;
+}
+
+/*Player container */
+
+.player-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: #C80036;
+}
+
+.card-heading {
+    font-size: 2.8em;
+}
+
+.img-item {
+    width: 4rem;
+}
+
+.img-item2 {
+    width: 4rem;
+}
+
+.select-box h3 {
+    padding: 7%;
+    font-size: 1.6em;
+}
+
+.select-box {
+    text-align: center;
+    font-family: glich2-font;
+    padding: 10px;
+}
+
+.btn {
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.1s all;
+}
+
+.btn:hover {
+    border: 3px solid black;
+}
+
+.btn:active {
+    scale: 0.9;
+}
+
+.img-picked,
+.machine-picked {
+    width: 6rem;
+    display: block;
+}
+
+/*Scors Section*/
+
+.scors-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: #004225;
+    min-width: 300px;
+    height: 470px;
+    border-radius: 15px;
+}
+
+.display-scors h1 {
+    text-decoration: underline;
+    font-size: 3em;
+}
+
+.points {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'goblin-font';
+    font-size: 3.5em;
+    gap: 10px;
+}
+
+.mid-line {
+    width: 5px;
+    height: 54px;
+    background-color: black;
+}
+
+.both-tie {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+.card.show1 {
+    display: block;
+}
+
+/**** Auto Player Section ****/
+
+.auto-play-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+
+
+/*** Card-Section ***/
+
+.container-winner {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+}
+
+.winner {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.card {
+    display: none;
+    width: 500px;
+    height: 370px;
+    background-image: linear-gradient(163deg, #0C1844 0%, #C80036 100%);
+    border-radius: 20px;
+    transition: all .3s;
+}
+
+.fail {
+    display: inline-block;
+    position: absolute;
+    top: 16%;
+    left: 11%;
+    font-size: 10em;
+    color: #C80036;
+}
+
+.card2 {
+    width: 500px;
+    height: 370px;
+    background-color: #1a1a1a;
+    border-radius: 20px;
+    transform: scale(0.98);
+    transition: all .2s;
+    position: relative;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+.icon-close {
+    position: absolute;
+    width: 2.5rem;
+    right: 0%;
+    cursor: pointer;
+}
+
+/*** Button Play-Again ****/
+
+.btn-play {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 4px 12px;
+    color: white;
+    text-shadow: 2px 2px rgb(116, 116, 116);
+    text-transform: uppercase;
+    cursor: pointer;
+    border: solid 2px black;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 17px;
+    background-color: hsl(49deg 98% 60%);
+    border-radius: 50px;
+    position: absolute;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    bottom: 5%;
+    left: 41%;
+}
+
+.btn-play:active {
+    transform: scale(0.9);
+    transition: all 100ms ease;
+}
+
+.btn-play .icon-scissors {
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.play {
+    transition: all 0.5s ease;
+    transition-delay: 300ms;
+}
+
+.btn-play:hover .icon-scissors {
+    transform: scale(2) translate(50%);
+}
+
+.again {
+    position: absolute;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.btn-play:hover .again {
+    transform: translateX(10px);
+    transition-delay: 300ms;
+}
+
+.btn-play:hover .play {
+    transform: translateX(200%);
+    transition-delay: 300ms;
+}
+
+.icon-scissors {
+    width: 2rem;
+}
+
+/** Mobile Size **/
+
+@media (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .player-container, 
+    .auto-play-container{
+        height: 14em;
+    }
+    .scors-container {
+        height: 21em;
+    }
+    .heading {
+        font-size: 2em;
+    }
+
+    .card-heading {
+        font-size: 2em;
+    }
+
+    .display-scors h1 {
+        font-size: 2.5em;
+    }
+
+    .points {
+        font-size: 3em;
+    }
+
+    .btn-play {
+        bottom: 3%;
+        left: 35%;
+        font-size: 15px;
+        gap: 8px;
+    }
+}
+
+/* Small Devices (Mobile) */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .heading {
+        font-size: 1.8em;
+    }
+
+    .card-heading {
+        font-size: 1.8em;
+    }
+
+    .display-scors h1 {
+        font-size: 2em;
+    }
+
+    .points {
+        font-size: 2.5em;
+    }
+
+    .select-box h3 {
+        font-size: 1.2em;
+    }
+
+    .btn-play {
+        font-size: 12px;
+        padding: 3px 8px;
+        bottom: 2%;
+        left: 30%;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .container-winner {
+        top: 20%;
+        left: 10%;
+        width: 80%;
+        height: auto;
+    }
+
+    .fail {
+        font-size: 9em;
+    }
+
+    .card {
+        height: auto;
+    }
+    .btn-play {
+        left: 35%;
+    }
+}
+
+@media (max-width: 600px) {
+    .container-winner {
+        top: 21%;
+        left: 4%;
+        height: auto;
+    }
+
+    .fail {
+        font-size: 7em;
+    }
+
+    .card, .card2 {
+        width: 108%;
+    }
+}
